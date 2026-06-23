@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aishwarya Kumar Arvind | Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ──────────────────── NAVBAR ──────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="img/logo/logo-dark.svg"  alt="Aishwarya Kumar Arvind" class="nav-logo-img nav-logo-dark" />
+        <img src="img/logo/logo-light.svg" alt="Aishwarya Kumar Arvind" class="nav-logo-img nav-logo-light" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nav-link">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#contact"    class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ──────────────────── HERO ──────────────────── -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Aishwarya Kumar Arvind</p>
+        <h1 class="hero-name">Software Engineer focused on building <span class="gradient-text">reliable, user-centered</span> web applications.</h1>
+        <div class="hero-role">
+          <span class="role-typed" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-bold">National Benefit Services</span>
+            <span class="stat-sub">Software Engineer</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-bold">5+</span>
+            <span class="stat-sub">Years engineering</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-bold">Denver</span>
+            <span class="stat-sub">Based in, CO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="photo-card">
+          <div class="photo-card-label">
+            <span>Engineer Snapshot</span>
+            <span class="open-badge"><span class="open-dot"></span>Connect with me</span>
+          </div>
+          <div class="photo-blob-outer" id="photoFrame">
+            <div class="photo-frame">
+              <img src="img/profile/aisha123.png" alt="Aishwarya Kumar Arvind" class="hero-photo" id="heroPhoto" />
+              <div class="photo-hover-overlay" id="photoOverlay">
+                <div class="photo-code-block">
+                  <div class="code-bar">
+                    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                    <span class="code-fname">developer.ts</span>
+                  </div>
+                  <pre class="code-body"><code><span class="ck">const</span> <span class="cv">engineer</span> = {
+  <span class="cp">name</span>:    <span class="cs">"Aishwarya Kumar Arvind"</span>,
+  <span class="cp">current</span>: <span class="cs">"NBS"</span>,
+  <span class="cp">stack</span>: [<span class="cs">"Next.js"</span>, <span class="cs">"React"</span>,
+           <span class="cs">"Python"</span>, <span class="cs">"Flask"</span>,
+           <span class="cs">"PostgreSQL"</span>, <span class="cs">"Azure"</span>],
+  <span class="cp">open</span>:    <span class="cn">true</span>,  <span class="cc">// connect with me!</span>
+};</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume download button -->
+    <a href="Aishwarya_Kumar_Arvind_Resume.pdf" download class="resume-fab" id="resumeFab" title="Download Resume">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
+      <span class="resume-fab-label">Resume</span>
+    </a>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── ABOUT ──────────────────── -->
+  <section id="about" class="section">
+    <div class="orb orb-3"></div>
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// 01. about</span>
+        <h2 class="sec-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-content reveal">
+          <h3 class="about-journey-title">My Journey</h3>
+          <div class="about-text">
+            <p>
+              CS graduate from <span class="co-badge co-blue">Northeastern University</span>, currently a Software Engineer at <span class="co-badge co-blue">National Benefit Services</span> in Denver, building enterprise software. Before that, I built research web applications at the <span class="co-badge co-blue">Healthcare Systems Engineering Institute</span> (HSyE) — developing clinical and public-health tools for hospital stakeholders.
+            </p>
+            <p>
+              I also contribute to cybersecurity research at <span class="co-badge co-purple">MIT Sloan</span>, modeling infrastructure resilience using Gurobi and NetworkX. At <span class="co-badge co-teal">Palladium</span>, I built AI pipelines with OpenAI's Whisper and GPT APIs for global development initiatives. Prior to that, three years at <span class="co-badge co-green">Accenture</span> delivering production data systems through automation and analytics.
+            </p>
+          </div>
+          <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
+        </div>
+
+        <div class="about-skills reveal">
+          <h3 class="about-journey-title">Expertise Areas</h3>
+          <div class="expertise-cards">
+            <div class="expertise-card">
+              <div class="exp-icon exp-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <h4>Full Stack Development</h4>
+                <div class="exp-tags"><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Tailwind CSS</span><span>Flask</span><span>SQLAlchemy</span></div>
+              </div>
+            </div>
+            <div class="expertise-card">
+              <div class="exp-icon exp-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              </div>
+              <div>
+                <h4>AI / ML &amp; Security</h4>
+                <div class="exp-tags"><span>RAG</span><span>LLM Tool-use</span><span>Presidio PII</span><span>Vector Search</span><span>RBAC</span><span>Azure AD/B2C</span></div>
+              </div>
+            </div>
+            <div class="expertise-card">
+              <div class="exp-icon exp-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div>
+                <h4>Cloud &amp; Real-Time</h4>
+                <div class="exp-tags"><span>Microsoft Azure</span><span>CI/CD</span><span>Azure Blob</span><span>WebJobs</span><span>WebSockets</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats reveal">
+        <div class="a-stat">
+          <svg class="a-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="a-stat-num">5+</span>
+          <span class="a-stat-lbl">Years Experience</span>
+        </div>
+        <div class="a-stat">
+          <svg class="a-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          <span class="a-stat-num">15+</span>
+          <span class="a-stat-lbl">Projects Completed</span>
+        </div>
+        <div class="a-stat">
+          <svg class="a-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <span class="a-stat-num">5+</span>
+          <span class="a-stat-lbl">Technologies</span>
+        </div>
+        <div class="a-stat">
+          <svg class="a-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <span class="a-stat-num">100%</span>
+          <span class="a-stat-lbl">Dedication</span>
+        </div>
+      </div>
+
+      <!-- Technical Skills Capsules -->
+      <div class="skills-wrap reveal">
+        <h3 class="skills-heading">Technical Skills</h3>
+        <div class="skills-sections">
+
+          <div class="skills-section">
+            <div class="skills-section-hdr hdr-blue">Frontend</div>
+            <div class="skills-chips">
+              <span class="skill-chip"><img src="img/skills/React-icon.svg.png" class="skill-chip-icon" alt="">React 19</span>
+              <span class="skill-chip"><svg class="skill-chip-icon" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg"><rect width="180" height="180" rx="36" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M149.508 157.52L69.142 54H54V125.97H66.1V69.3L139.999 164.802A88.56 88.56 0 00149.508 157.52Z" fill="white"/><rect x="115" y="54" width="12.5" height="72" fill="white"/></svg>Next.js 15</span>
+              <span class="skill-chip"><img src="img/skills/JavaScript-logo.png" class="skill-chip-icon" alt="">JavaScript</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-blue">TS</span>TypeScript</span>
+              <span class="skill-chip"><img src="img/skills/HTML5_logo_and_wordmark.svg.png" class="skill-chip-icon" alt="">HTML / CSS</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-teal">TW</span>Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <div class="skills-section-hdr hdr-orange">Backend</div>
+            <div class="skills-chips">
+              <span class="skill-chip"><img src="img/skills/Python-logo.png" class="skill-chip-icon" alt="">Python 3.13</span>
+              <span class="skill-chip"><img src="img/skills/flask.png" class="skill-chip-icon" alt="">Flask 3.1</span>
+              <span class="skill-chip"><img src="img/skills/Node.js_logo.svg.png" class="skill-chip-icon" alt="">Node.js</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-orange">SA</span>SQLAlchemy ORM</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-orange">PS</span>PySpark</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-orange">API</span>REST API Design</span>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <div class="skills-section-hdr hdr-teal">Cloud &amp; DevOps</div>
+            <div class="skills-chips">
+              <span class="skill-chip"><span class="skill-chip-badge badge-blue">Az</span>Microsoft Azure</span>
+              <span class="skill-chip"><img src="img/skills/docker.svg" class="skill-chip-icon" alt="">Docker</span>
+              <span class="skill-chip"><img src="img/skills/GitHub-Mark-ea2971cee799.png" class="skill-chip-icon" alt="">Git / GitHub</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-teal">CI</span>CI / CD Pipelines</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-teal">PG</span>PostgreSQL</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-teal">WJ</span>Azure WebJobs</span>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <div class="skills-section-hdr hdr-purple">AI / ML &amp; Security</div>
+            <div class="skills-chips">
+              <span class="skill-chip"><img src="img/skills/gpt.webp" class="skill-chip-icon" alt="">RAG / LLM tool-use</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-purple">VS</span>Vector Search</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-purple">PII</span>Presidio PII</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-purple">RB</span>RBAC</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-purple">AD</span>Azure AD / B2C</span>
+              <span class="skill-chip"><span class="skill-chip-badge badge-purple">AL</span>Audit Logging</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── EXPERIENCE ──────────────────── -->
+  <section id="experience" class="section section-alt">
+    <div class="orb orb-4"></div>
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// 02. experience</span>
+        <h2 class="sec-title">Work Experience</h2>
+      </div>
+
+      <!-- Alternating two-column timeline -->
+      <div class="exp-wrap" id="expWrap">
+
+        <!-- Spine spans all rows -->
+        <div class="exp-spine">
+          <div class="exp-center-line"></div>
+          <div class="exp-ping" id="expPing">
+            <div class="exp-ping-ring"></div>
+            <div class="exp-ping-inner"></div>
+          </div>
+        </div>
+
+        <!-- NBS — left -->
+        <div class="ec-card ec-left ec-pos-left reveal">
+          <div class="ec-inner">
+            <div class="ec-body ec-body-right">
+              <span class="ec-period">Oct 2025 — Present</span>
+              <span class="ec-contract">Full-Time</span>
+              <h3 class="ec-title">Software Engineer</h3>
+              <div class="ec-meta ec-meta-right">
+                <span class="ec-company">National Benefit Services</span>
+                <span class="ec-loc">&#128205; Denver, CO</span>
+              </div>
+              <p class="ec-desc">Enterprise contract-lifecycle platform (Next.js 15 / Flask / PostgreSQL / Azure) — AI document assistant with RAG and PII de-identification, fine-grained RBAC (~60 permissions), automated RFP &amp; opportunity-discovery pipeline via Azure WebJobs, and CI/CD.</p>
+              <div class="ec-tags ec-tags-right">
+                <span>Next.js 15</span><span>React 19</span><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Azure</span><span>RAG</span><span>RBAC</span><span>WebJobs</span>
+              </div>
+            </div>
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/nbs-dark.webp"  alt="National Benefit Services" class="ec-logo-img ec-logo-wide ec-logo-theme-dark" />
+              <img src="img/organizations/nbs-light.png" alt="National Benefit Services" class="ec-logo-img ec-logo-wide ec-logo-theme-light" />
+            </div>
+          </div>
+        </div>
+
+        <!-- HSyE — right -->
+        <div class="ec-card ec-right ec-pos-right reveal">
+          <div class="ec-inner">
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/hsye.jpeg" alt="HSyE" class="ec-logo-img" />
+            </div>
+            <div class="ec-body ec-body-left">
+              <span class="ec-period">Jul 2023 — Sep 2025</span>
+              <span class="ec-contract">Full-Time</span>
+              <h3 class="ec-title">Research Assistant – Full Stack Developer</h3>
+              <div class="ec-meta ec-meta-left">
+                <span class="ec-company">Healthcare Systems Engineering Institute (HSyE)</span>
+                <span class="ec-loc">&#128205; Boston, MA</span>
+              </div>
+              <p class="ec-desc">Led full-stack development of <a href="https://www.episurge.hsye.org/" target="_blank" class="inline-link">EpiSurge</a> — a real-time epidemic simulation platform for hospital capacity planning — with a Flask API backend, AWS infrastructure (S3/EC2/DynamoDB), and React data visualizations used by clinical stakeholders.</p>
+              <div class="ec-tags ec-tags-left">
+                <span>React</span><span>Flask</span><span>AWS</span><span>DynamoDB</span><span>Python</span><span>Healthcare</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MIT Sloan — left -->
+        <div class="ec-card ec-left ec-pos-left reveal">
+          <div class="ec-inner">
+            <div class="ec-body ec-body-right">
+              <span class="ec-period">Jun 2024 — Oct 2025</span>
+              <span class="ec-contract">Part-Time</span>
+              <h3 class="ec-title">Research Volunteer</h3>
+              <div class="ec-meta ec-meta-right">
+                <span class="ec-company">MIT Sloan School of Management (CAMS)</span>
+                <span class="ec-loc">&#128205; Cambridge, MA</span>
+              </div>
+              <p class="ec-desc">Simulating cyberattacks on critical infrastructure using NetworkX and Gurobi optimization to model resilience and recovery strategies at the organizational level.</p>
+              <div class="ec-tags ec-tags-right">
+                <span>Python</span><span>NetworkX</span><span>Gurobi</span><span>Optimization</span>
+              </div>
+            </div>
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/mit.png" alt="MIT Sloan" class="ec-logo-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Palladium — right -->
+        <div class="ec-card ec-right ec-pos-right reveal">
+          <div class="ec-inner">
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/palladium.jpg" alt="Palladium" class="ec-logo-img" />
+            </div>
+            <div class="ec-body ec-body-left">
+              <span class="ec-period">Sep 2023 — Dec 2023</span>
+              <span class="ec-contract">Internship</span>
+              <h3 class="ec-title">Data Science Intern – AI / ML Applications</h3>
+              <div class="ec-meta ec-meta-left">
+                <span class="ec-company">DataFI, The Palladium Group</span>
+                <span class="ec-loc">&#128205; Washington, DC</span>
+              </div>
+              <p class="ec-desc">Built a Whisper transcription pipeline for USAID healthcare projects. Deployed RAG-based LLM solutions (GPT-4 + Mistral7B) for document summarization and semantic retrieval via AWS SageMaker.</p>
+              <div class="ec-tags ec-tags-left">
+                <span>Python</span><span>Docker</span><span>OpenAI API</span><span>LLM / RAG</span><span>SageMaker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accenture — left -->
+        <div class="ec-card ec-left ec-pos-left reveal">
+          <div class="ec-inner">
+            <div class="ec-body ec-body-right">
+              <span class="ec-period">May 2018 — Feb 2021</span>
+              <span class="ec-contract">Full-Time</span>
+              <h3 class="ec-title">Software Engineer</h3>
+              <div class="ec-meta ec-meta-right">
+                <span class="ec-company">Accenture PLC</span>
+                <span class="ec-loc">&#128205; Mumbai, India</span>
+              </div>
+              <p class="ec-desc">Led backend data automation in the telecom vertical using PySpark and SQL across Palantir Foundry. Shell scripts saved 150+ engineering hours/month supporting client audits.</p>
+              <div class="ec-tags ec-tags-right">
+                <span>PySpark</span><span>SQL</span><span>UNIX Shell</span><span>Palantir Foundry</span>
+              </div>
+            </div>
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/accenture.png" alt="Accenture" class="ec-logo-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- IIT Delhi — right -->
+        <div class="ec-card ec-right ec-pos-right reveal">
+          <div class="ec-inner">
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/iitd.jpg" alt="IIT Delhi" class="ec-logo-img" />
+            </div>
+            <div class="ec-body ec-body-left">
+              <span class="ec-period">Dec 2017 — May 2018</span>
+              <span class="ec-contract">Internship</span>
+              <h3 class="ec-title">Research Intern – NanoSensor Development</h3>
+              <div class="ec-meta ec-meta-left">
+                <span class="ec-company">IIT Delhi</span>
+                <span class="ec-loc">&#128205; Delhi, India</span>
+              </div>
+              <p class="ec-desc">Created a LabVIEW-based interface to automate translation stage movement for nanosensor development. Integrated temperature control modules and tested sensor responsiveness under varying conditions.</p>
+              <div class="ec-tags ec-tags-left">
+                <span>C++</span><span>LabVIEW</span><span>Instrumentation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leeds — left -->
+        <div class="ec-card ec-left ec-pos-left reveal">
+          <div class="ec-inner">
+            <div class="ec-body ec-body-right">
+              <span class="ec-period">Jul 2017 — Aug 2017</span>
+              <span class="ec-contract">Summer Program</span>
+              <h3 class="ec-title">Summer Program – Robotics &amp; Sustainability</h3>
+              <div class="ec-meta ec-meta-right">
+                <span class="ec-company">Leeds International Summer Program</span>
+                <span class="ec-loc">&#128205; Leeds, UK</span>
+              </div>
+              <p class="ec-desc">Built a line-following robot and a 3-DoF robotic arm from scratch. Participated in interdisciplinary workshops on sustainability and energy systems.</p>
+              <div class="ec-tags ec-tags-right">
+                <span>Python</span><span>Robotics</span><span>Team Collaboration</span>
+              </div>
+            </div>
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/leeds.png" alt="Leeds" class="ec-logo-img" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── EDUCATION ──────────────────── -->
+  <section id="education" class="section">
+    <div class="orb orb-3"></div>
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// 03. education</span>
+        <h2 class="sec-title">Education</h2>
+      </div>
+
+      <div class="exp-wrap" id="eduWrap">
+
+        <!-- Spine -->
+        <div class="exp-spine">
+          <div class="exp-center-line"></div>
+          <div class="exp-ping" id="eduPing">
+            <div class="exp-ping-ring"></div>
+            <div class="exp-ping-inner"></div>
+          </div>
+        </div>
+
+        <!-- Northeastern — left -->
+        <div class="ec-card ec-left ec-pos-left reveal">
+          <div class="ec-inner">
+            <div class="ec-body ec-body-right">
+              <span class="ec-period">Sep 2022 — Dec 2024</span>
+              <span class="ec-contract">Full-Time</span>
+              <h3 class="ec-title">Master of Science in Computer Science</h3>
+              <div class="ec-meta ec-meta-right">
+                <span class="ec-company">Northeastern University – Khoury College of Computer Sciences</span>
+                <span class="ec-loc">&#128205; Boston, MA</span>
+              </div>
+              <p class="ec-desc">Focus on machine learning, algorithms, and software development. Graduated with strong research experience in full-stack development and AI systems.</p>
+              <div class="ec-tags ec-tags-right">
+                <span>HCI</span><span>Machine Learning</span><span>Algorithms</span><span>AI</span><span>Web Dev</span><span>Mobile Dev</span>
+              </div>
+            </div>
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/northeastern.jpg" alt="Northeastern University" class="ec-logo-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PSG Tech — right -->
+        <div class="ec-card ec-right ec-pos-right reveal">
+          <div class="ec-inner">
+            <div class="ec-logo-wrap">
+              <img src="img/organizations/psgtech.jpg" alt="PSG College of Technology" class="ec-logo-img" />
+            </div>
+            <div class="ec-body ec-body-left">
+              <span class="ec-period">Jun 2014 — May 2018</span>
+              <span class="ec-contract">Full-Time</span>
+              <h3 class="ec-title">Bachelor of Engineering in Electronics &amp; Communication</h3>
+              <div class="ec-meta ec-meta-left">
+                <span class="ec-company">PSG College of Technology</span>
+                <span class="ec-loc">&#128205; Coimbatore, India</span>
+              </div>
+              <p class="ec-desc">Strong foundation in programming, systems, and engineering fundamentals. Covered computer networks, OS, network security, and microprocessors.</p>
+              <div class="ec-tags ec-tags-left">
+                <span>C / C++</span><span>Data Structures</span><span>Networks</span><span>OS</span><span>Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── PROJECTS ──────────────────── -->
+  <section id="projects" class="section">
+    <div class="orb orb-1" style="top:10%;right:5%;left:auto;"></div>
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// 04. projects</span>
+        <h2 class="sec-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-ai">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">AI-Assisted Legal Resource Navigator</h3>
+          <p class="proj-desc">HCI-focused AI-powered legal resource navigator for formerly incarcerated individuals using a modified RAG approach. Provides guided queries, verified resources, and document summarization — achieving 85% task completion in usability testing.</p>
+          <div class="proj-tech">
+            <span>Python</span><span>OpenAI API</span><span>TypeScript</span><span>React</span><span>RAG</span>
+          </div>
+          <div class="proj-cat-tags"><span>AI/ML</span><span>LegalTech</span><span>HCI</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-ml">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 10a5 5 0 0010 0"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">Facial Emotion Detection System</h3>
+          <p class="proj-desc">SVM-based facial emotion detection system leveraging FaceNet and VGG embeddings. Implemented PCA for dimensionality reduction, hyperparameter tuning, and data augmentation techniques for high-accuracy emotion classification.</p>
+          <div class="proj-tech">
+            <span>Python</span><span>Scikit-learn</span><span>TensorFlow</span><span>FaceNet</span>
+          </div>
+          <div class="proj-cat-tags"><span>AI/ML</span><span>Computer Vision</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-cyber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">Cyberattacks in Autonomous Vehicles</h3>
+          <p class="proj-desc">CNN model to identify cyberattacks from genuine threats in autonomous vehicles — achieving 99.96% accuracy and 99.93% specificity, surpassing Random Forest and Gradient Boosting baselines.</p>
+          <div class="proj-tech">
+            <span>Python</span><span>PyTorch</span><span>CNN</span>
+          </div>
+          <div class="proj-cat-tags"><span>AI/ML</span><span>Cybersecurity</span><span>Autonomous Vehicles</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-web">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">QUANS – Collaborative Q&A Platform</h3>
+          <p class="proj-desc">Full-stack collaborative discussion forum and knowledge market, facilitating user-driven Q&A with a diverse community. Integrated multiple Web APIs to retrieve and store data, improving platform performance and discoverability.</p>
+          <div class="proj-tech">
+            <span>React</span><span>Redux</span><span>Node.js</span><span>MongoDB</span><span>JavaScript</span>
+          </div>
+          <div class="proj-cat-tags"><span>Full Stack</span><span>Web App</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-mobile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">Rhythm Lounge – Android App</h3>
+          <p class="proj-desc">Android music events app incorporating geocoding and heatmap utility to facilitate real-time visualization of local music events, significantly improving user interaction and fostering community connections.</p>
+          <div class="proj-tech">
+            <span>Android Studio</span><span>Java</span><span>Firebase</span>
+          </div>
+          <div class="proj-cat-tags"><span>Mobile App</span><span>Geo-location</span><span>Crowd-sourced</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon proj-icon-finance">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <a href="https://github.com/aishwaryakumara" target="_blank" class="proj-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <h3 class="proj-title">Stock Market – Java Application</h3>
+          <p class="proj-desc">Stock market app based on the MVC design pattern that lets investors create flexible portfolios, make trades, and adjust holdings. Makes real-time API calls to fetch live stock market information.</p>
+          <div class="proj-tech">
+            <span>Java</span><span>Java Swing</span><span>MVC</span><span>REST API</span>
+          </div>
+          <div class="proj-cat-tags"><span>Java Application</span><span>Financial App</span></div>
+        </div>
+
+      </div>
+
+      <div class="projects-footer reveal">
+        <p>More projects on GitHub</p>
+        <a href="https://github.com/aishwaryakumara" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── CONTACT ──────────────────── -->
+  <section id="contact" class="section section-alt">
+    <div class="orb orb-2" style="top:20%;right:5%;left:auto;"></div>
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">// 05. contact</span>
+        <h2 class="sec-title">Get In Touch</h2>
+        <p class="sec-sub">I would love to hear from you</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="contact-form reveal" id="contactForm">
+          <h3>Let's Work Together</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="user_name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="user_email" placeholder="Email Address" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span id="submitText">Send Message</span>
+            <svg id="submitIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</p>
+        </form>
+
+        <div class="contact-right reveal">
+          <div class="contact-pro-card">
+            <div class="contact-avatar">
+              <span>AKA</span>
+            </div>
+            <h3>Aishwarya Kumar Arvind</h3>
+            <p>Software Developer | Web App Developer</p>
+            <div class="contact-meta">
+              <div><span class="avail-dot"></span> Connect with me</div>
+              <div>&#128205; Denver, Colorado</div>
+              <div>&#9889; Usually responds within 24 hours</div>
+            </div>
+          </div>
+
+          <div class="contact-socials-card">
+            <h4>Connect With Me</h4>
+            <div class="socials-grid">
+              <a href="https://linkedin.com/in/aishwaryakumara" target="_blank" rel="noopener" class="social-btn social-li">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/aishwaryakumara" target="_blank" rel="noopener" class="social-btn social-gh">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:arvind.ai@northeastern.edu" class="social-btn social-em">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email</span>
+              </a>
+              <a href="Aishwarya_Kumar_Arvind_Resume.pdf" download class="social-btn social-cv">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Resume</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── FOOTER ──────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="nav-logo">
+          <span class="logo-bracket">&lt;</span><span class="logo-name">AKA</span><span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">Designed &amp; built by Aishwarya Kumar Arvind &mdash; 2025</p>
+        <div class="footer-socials">
+          <a href="https://github.com/aishwaryakumara" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/aishwaryakumara" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:arvind.ai@northeastern.edu">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

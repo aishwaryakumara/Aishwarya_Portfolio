@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open /Users/aishwaryakumar/Documents/aish_new/index.html)",
+      "Bash(ls /Users/aishwaryakumar/Documents/Personal_Portfolio-1)",
+      "Read(//Users/aishwaryakumar/Documents/Personal_Portfolio-1/**)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/home/aisha123.png\" /Users/aishwaryakumar/Documents/aish_new/img/)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/experience cards/hsye updated.jpeg\" /Users/aishwaryakumar/Documents/aish_new/img/hsye.jpeg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/experience cards/Pal-OG.jpg\" /Users/aishwaryakumar/Documents/aish_new/img/palladium.jpg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/experience cards/Accenture.png\" /Users/aishwaryakumar/Documents/aish_new/img/accenture.png)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/experience cards/iitdlogo.jpg\" /Users/aishwaryakumar/Documents/aish_new/img/iitd.jpg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/header/logo.svg\" /Users/aishwaryakumar/Documents/aish_new/img/logo.svg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/education/northeastern-university.jpg\" /Users/aishwaryakumar/Documents/aish_new/img/northeastern.jpg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/education/psgtechf.jpg\" /Users/aishwaryakumar/Documents/aish_new/img/psgtech.jpg)",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/header/light theme.svg\" \"/Users/aishwaryakumar/Documents/aish_new/img/logo-light.svg\")",
+      "Bash(cp \"/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/header/dark theme.svg\" \"/Users/aishwaryakumar/Documents/aish_new/img/logo-dark.svg\")",
+      "Bash(find /Users/aishwaryakumar/Documents/aish_new -type f | sort && echo \"---\" && ls /Users/aishwaryakumar/Downloads/ 2>/dev/null | grep -i nbs | head -10)",
+      "Read(//Users/aishwaryakumar/Downloads/**)",
+      "Bash(mkdir -p /Users/aishwaryakumar/Documents/aish_new/img/skills && cp /Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/skills/* /Users/aishwaryakumar/Documents/aish_new/img/skills/ && ls /Users/aishwaryakumar/Documents/aish_new/img/skills/)",
+      "Bash(git -C /Users/aishwaryakumar/Documents/aish_new status)"
+    ],
+    "additionalDirectories": [
+      "/Users/aishwaryakumar/Documents/Personal_Portfolio-1/src/img/skills"
+    ]
+  }
+}

@@ -34,11 +34,11 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
 
 /* ── Typing animation ── */
 const roles = [
-  'Software Engineer',
-  'Web App Developer',
-  'Full Stack Engineer',
+  'Software Developer',
+  'Web Developer',
+  'Full Stack Web Developer',
+  'React & Next.js Developer',
   'Product-minded Builder',
-  'ML & AI Enthusiast',
 ];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const typedEl = document.getElementById('typedText');
@@ -198,6 +198,111 @@ const success = document.getElementById('formSuccess');
 const submitBtn  = document.getElementById('submitBtn');
 const submitText = document.getElementById('submitText');
 
+/* ── Experience Modal ── */
+const expData = {
+  nbs: {
+    period: 'Oct 2025 — Present', contract: 'Full-Time',
+    title: 'Software Developer', company: 'National Benefit Services', loc: '📍 Denver, CO',
+    bullets: [
+      'Design, develop, and maintain a secure enterprise contract management web application for a third-party benefits administrator, delivering contract intake, review workflows, document tracking, and administrative reporting through interactive web interfaces.',
+      'Build responsive, accessible (WCAG 2.2 AA) web interfaces using Next.js, React, Tailwind, and TypeScript; evaluate code to ensure proper structure, standards compliance, usability, and compatibility across browsers and devices.',
+      'Implement web authentication and access-control flows using OAuth/OIDC (MSAL, Azure AD/B2C) for secure handling of sensitive participant data, incorporating privacy and accessibility considerations.',
+      'Develop real-time web collaboration features using WebSocket and Yjs, and write supporting server-side code and RESTful APIs in Python and Flask for contract workflow automation, business logic, and data validation.',
+      'Maintain the SQL databases and Microsoft Azure components that support the web system, and build front-end web tests with Playwright and Vitest to improve performance, scalability, reliability, and release quality.',
+    ],
+    tags: ['Next.js 15','React 19','TypeScript','Tailwind','Python','Flask','WebSocket/Yjs','OAuth/OIDC','Azure','Playwright','Vitest'],
+  },
+  hsye: {
+    period: 'Jul 2023 — Sep 2025', contract: 'Full-Time',
+    title: 'Research Assistant – Full Stack Web Developer', company: 'Healthcare Systems Engineering Institute (HSyE)', loc: '📍 Boston, MA',
+    bullets: [
+      'Designed and developed a full-stack healthcare web application using a Flask backend and React/JavaScript frontend to support hospital operations, epidemic surge planning, and real-time decision-support workflows.',
+      'Developed and maintained the interactive web interfaces and RESTful APIs that support the web application, integrating DynamoDB for efficient data retrieval and scalable web workflows.',
+      'Configured AWS infrastructure (Nginx, Gunicorn, CloudFront) and implemented GitHub Actions CI/CD pipelines to improve web application performance, reliability, and iterative releases within an Agile Scrum team.',
+      'Developed web-based visualization and presentation features to communicate hospital resource-allocation outcomes to healthcare professionals during epidemic surge scenarios.',
+    ],
+    tags: ['React','Flask','JavaScript','AWS','DynamoDB','GitHub Actions','CI/CD','Agile/Scrum'],
+  },
+  mit: {
+    period: 'Jun 2024 — Oct 2025', contract: 'Part-Time',
+    title: 'Research Volunteer', company: 'MIT Sloan School of Management (CAMS)', loc: '📍 Cambridge, MA',
+    bullets: [
+      'Developed software tools and data-visualization workflows to model organizational cyber resilience, critical-infrastructure dependencies, and restoration strategies after disruption events, using Python, NetworkX, and Gurobi.',
+    ],
+    tags: ['Python','NetworkX','Gurobi','Data Visualization','Research'],
+  },
+  palladium: {
+    period: 'Sep 2023 — Dec 2023', contract: 'Internship',
+    title: 'Data Science Intern – AI / ML Applications', company: 'DataFI, The Palladium Group', loc: '📍 Washington, DC',
+    bullets: [
+      'Built a Whisper transcription pipeline for USAID healthcare projects, enabling automated transcription of multilingual audio recordings.',
+      'Deployed RAG-based LLM solutions (GPT-4 + Mistral7B) for document summarization and semantic retrieval via AWS SageMaker.',
+    ],
+    tags: ['Python','Docker','OpenAI API','LLM / RAG','SageMaker','Whisper'],
+  },
+  accenture: {
+    period: 'May 2018 — Feb 2021', contract: 'Full-Time',
+    title: 'Software Engineer', company: 'Accenture PLC', loc: '📍 Mumbai, India',
+    bullets: [
+      'Developed enterprise software and backend solutions and collaborated with full-stack development teams to integrate backend pipelines with user-facing applications, improving usability and decision-support capabilities.',
+      'Designed and deployed automation that improved team productivity by 150+ hours per month and contributed to client revenue recovery initiatives.',
+      'Recognized with the APEX Excellence Award (Individual) for client impact and contract profitability.',
+    ],
+    tags: ['ASP.NET/C#','PySpark','SQL','MySQL','UNIX Shell Scripting'],
+  },
+  iitd: {
+    period: 'Dec 2017 — May 2018', contract: 'Internship',
+    title: 'Research Intern – NanoSensor Development', company: 'IIT Delhi', loc: '📍 Delhi, India',
+    bullets: [
+      'Created a LabVIEW-based interface to automate translation stage movement for nanosensor development.',
+      'Integrated temperature control modules and tested sensor responsiveness under varying environmental conditions.',
+    ],
+    tags: ['C++','LabVIEW','Instrumentation'],
+  },
+  leeds: {
+    period: 'Jul 2017 — Aug 2017', contract: 'Summer Program',
+    title: 'Summer Program – Robotics & Sustainability', company: 'Leeds International Summer Program', loc: '📍 Leeds, UK',
+    bullets: [
+      'Built a line-following robot and a 3-DoF robotic arm from scratch using Python and hardware integration.',
+      'Participated in interdisciplinary workshops on sustainability and energy systems.',
+    ],
+    tags: ['Python','Robotics','Team Collaboration'],
+  },
+};
+
+const overlay = document.getElementById('expModalOverlay');
+const modalClose = document.getElementById('expModalClose');
+
+function openExpModal(id) {
+  const d = expData[id]; if (!d) return;
+  document.getElementById('modalPeriod').textContent   = d.period;
+  document.getElementById('modalContract').textContent = d.contract;
+  document.getElementById('modalTitle').textContent    = d.title;
+  document.getElementById('modalCompany').textContent  = d.company;
+  document.getElementById('modalLoc').textContent      = d.loc;
+  document.getElementById('modalBullets').innerHTML    = d.bullets.map(b => `<li>${b}</li>`).join('');
+  document.getElementById('modalTags').innerHTML       = d.tags.map(t => `<span>${t}</span>`).join('');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeExpModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.ec-card[data-exp], .research-card[data-exp]').forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    openExpModal(card.dataset.exp);
+  });
+});
+
+modalClose.addEventListener('click', closeExpModal);
+overlay.addEventListener('click', (e) => { if (e.target === overlay) closeExpModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeExpModal(); });
+
+/* ── Contact Form ── */
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitText.textContent = 'Sending...';
